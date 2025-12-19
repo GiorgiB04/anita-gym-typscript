@@ -24,16 +24,15 @@ const Contact = ( {setSelectedPage }: Props) => {
     }
   };
   return (
-    <section id="kontakt" className="mx-auto pt-24 pb-32 w-full bg-gray-20 py-40">
+    <section id="kontakt" className="mx-auto pt-10 pb-32 w-full bg-gray-20 py-40">
         <motion.div className="mx-auto w-5/6"
-         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={{
-        hidden: { opacity: 0, x: 100 },
-        visible: { opacity: 1, x: 0 },
-        }}
-        transition={{ duration: 0.5 }}
+           initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+                hidden: { opacity: 0, y: -100 },
+                visible: { opacity: 1, y: 0 },
+            }}
         onViewportEnter={() => setSelectedPage(SelectedPage.Kontakt)}
         >   
         <div className="md:w-3/5 items-center justify-center md:mx-auto">
@@ -54,10 +53,9 @@ const Contact = ( {setSelectedPage }: Props) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 0 },
             }}
           >
             <form
@@ -133,12 +131,11 @@ const Contact = ( {setSelectedPage }: Props) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
             }}
-          >
+            >
             <div className="w-full relative overflow-hidden rounded-lg md:rounded-xl before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
               <img
                 className="w-full"
