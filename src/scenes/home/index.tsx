@@ -1,6 +1,6 @@
 import ActionButton from "@/shared/ActionButton";
 import { SelectedPage } from "@/shared/types";
-import Herogirl from "@/assets/herogirl.png";
+import Herogirl from "@/assets/Herogirl.png";
 import { motion } from "framer-motion";
 
 type Props = {
